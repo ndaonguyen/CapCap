@@ -7,6 +7,9 @@
 .metadata
 bin/
 tmp/
+library/
+files/html_menu/
+
 *.tmp
 *.bak
 *.swp
