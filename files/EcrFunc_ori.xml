@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FunctionList>
+  <Group Name="Admin">
+    <Function Code="55" Caption="Terminal Status" Description="Request Terminal Status" MsgData="" RspData="" />
+    <Function Code="58" Caption="Switch to NETS" Description="Switch to NETS EFTPOS Application" MsgData="" RspData="" />
+    <Function Code="59" Caption="Switch to Prepaid" Description="Switch to NETS Prepaid/Loyalty Application" MsgData="" RspData="" />
+    <Function Code="80" Caption="Log On" Description="Log On" MsgData="" RspData="02,D0,03,04,65,16,D1" />
+    <Function Code="81" Caption="Settlement" Description="Settlement" MsgData="" RspData="02,D0,03,04,65,16,D1" />
+    <Function Code="90" Caption="Terminal Financial Status" Description="Request Terminal Financial Transaction Status" MsgData="" RspData="" />
+  </Group>
+
+  <Group Name="CTLS">
+    <Function Code="24" Caption="CTLS Debit" Description="Contactless Debit" MsgData="40,H4" RspData="02,D0,16,D1,50,H6,40,ZA,ZB,ZC,30,C2,R0,R1,ZP,01,D2,ZT,D3,C1,C0" />
+    <Function Code="72" Caption="Debit Statement Fee" Description="Contactless Debit Statement Fee" MsgData="30,H4" RspData="02,D0,16,D1,50,H6,C1,30,C2,R0,R1,C0" />
+    <Function Code="73" Caption="Transaction Log" Description="Contactless Read Transaction Log" MsgData="S4,S5,30" RspData="02,D0,03,04,16,D1,C1,30,C2,HC,S7,S8,S9" />
+    <Function Code="41" Caption="Concession Debit" Description="Concession Debit" MsgData="40,H4" RspData="02,D0,16,D1,50,H6,40,30,C2,R0,R1,ZP,01,D2,ZT,D3,C1,C0" />
+    <Function Code="46" Caption="Top Up with Fee" Description="Contactless Top Up with Fee from Host" MsgData="40,T1,H4" RspData="02,D0,16,D1,50,H6,ZA,ZB,ZC,C1,30,C2,R0,R1,C0" />
+    <Function Code="60" Caption="ATU Activation " Description="ATU Activation" MsgData="C8,CG,CJ,CA,CH,CI,CK,CL,CM" RspData="02,D0,16,D1,50,H6,C1,30,C2,CJ,CI,CG,R0,R1,C0" />
+    <Function Code="61" Caption="ATU Dereg" Description="De-registration" MsgData="CM,CJ,CA" RspData="02,D0,16,D1,50,01,H6,03,04,D3,C1,30,C2,R0,R1,C0" />
+    <Function Code="62" Caption="NFP Inquiry" Description="NFP Inquiry" MsgData="CM,T2,CH,CI,CJ,CA" RspData="02,D0,03,04,01,65,16,D1,D3,CJ,CI,T2,R0,R1,T3" />
+    <Function Code="63" Caption="Debt Payment" Description="Debt Payment" MsgData="40,CM,T4,CH,CI,CJ,CA,T1,H4" RspData="02,D0,03,04,01,65,16,D1,D3,CJ,CI,T4,CB,R0,R1,C0" />
+    <Function Code="64" Caption="Change ATU Amt" Description="Change in ATU Amount" MsgData="CM,CH,CI,CJ,CA,C8,C7,CM,CH" RspData="02,D0,03,04,01,65,16,D1,D3,C8,C7,R0,R1,C0" />
+    <Function Code="71" Caption="Offline Enquiry" Description="Contactless Offline Card Enquiry" MsgData="H4" RspData="02,D0,16,D1,C1,30,C2,HC,S3,S2,C8" />
+    <Function Code="84" Caption="CTLS Refund" Description="Contactless Refund" MsgData="T1,H4" RspData="02,D0,16,D1,50,H6,C1,30,C2,R0,R1,C0" />
+    <Function Code="85" Caption="Sale Activation" Description="Card Sale Activation" MsgData="H4" RspData="02,D0,16,D1,50,H6,C1,30,C2,R0,R1,C0" />
+    <Function Code="86" Caption="Sale Activation with Mobile" Description="Card Sale Activation with Mobile Number" MsgData="H4,MN" RspData="02,D0,16,D1,50,H6,C1,30,C2,R0,R1,C0" />
+    <Function Code="87" Caption="Last CEPAS2 Txn" Description="Last Successful CEPAS2 Transaction" MsgData="" RspData="02,D0,16,D1,50,H6,ZA,ZB,ZC,C1,30,C2,R0,R1,ZY,C0" />
+    <Function Code="N0" Caption="Top Up with Fee - ATM Chip" Description="Contactless Top Up with Fee from Host - ATM Chip" MsgData="40,T1,H4" RspData="02,D0,03,04,16,D1,H6,50,30,C2,C1,ZA,ZB,ZC,R0,R1,C0,E0" />
+    <Function Code="N1" Caption="Debt Payment - ATM Chip" Description="Debt Payment - ATM Chip" MsgData="40,CM,T4,CH,CI,CJ,CA,T1,H4" RspData="02,D0,03,04,16,D1,H6,01,D3,CJ,CI,T4,CB,R0,R1,C0,E0" />
+    <Function Code="N2" Caption="CTLS Refund - ATM Chip" Description="Contactless Refund - ATM Chip" MsgData="T1,H4" RspData="02,D0,03,04,16,D1,H6,50,C1,30,C2,R0,R1,C0,E0" />
+  </Group>
+
+  <Group Name="$Card">
+    <Function Code="25" Caption="Debit" Description="CashCard Debit" MsgData="40,H4" RspData="02,D0,03,04,16,D1,30,31,50,H5,H6,H7,H8,H9,HA,HB,HC" />
+    <Function Code="40" Caption="Top Up" Description="CashCard Top-Up" MsgData="40,T1,H4" RspData="02,D0,03,04,16,D1,30,31,50,H5,H6,H7,H8,H9,HA,HB,HC" />
+    <Function Code="45" Caption="Top Up with Fee" Description="CashCard Top Up with Fee from Host" MsgData="40,T1,H4" RspData="02,D0,03,04,16,D1,30,31,50,H5,H6,H7,H8,H9,HA,HB,HC,41,46,47" />
+    <Function Code="51" Caption="Debit with Fee" Description="CashCard Debit with Service Fee" MsgData="40,H4" RspData="02,D0,03,04,16,D1,30,31,50,H5,H6,H7,H8,H9,HA,HB,HC,41" />
+    <Function Code="C0" Caption="Top Up with Fee - ATM Chip" Description="CashCard Top Up with Fee from Host - ATM Chip" MsgData="40,T1,H4" RspData="02,D0,03,04,16,D1,H6,30,31,50,H5,H7,H8,H9,HA,HB,HC,41,46,47,E0" />
+  </Group>
+
+  <Group Name="Credit Card">
+    <Function Code="I0" Caption="Sale" Description="Sale" MsgData="40,9G,H4" RspData="02,D0,03,04,01,9H,16,D1,D2,30,31,50,D3,D6,9A,9B,9C,9D,9F,9E" />
+    <Function Code="I1" Caption="Void" Description="Void" MsgData="9H,9G,H4" RspData="02,D0,03,04,01,9H,16,D1,D2,30,31,50,D3,D6,9A,9B,9C,9D,9F,9E" />
+    <Function Code="I2" Caption="IPP Sale" Description="IPP Sale" MsgData="40,9G,H4" RspData="02,D0,03,04,01,9H,16,D1,D2,30,31,50,D3,D6,9A,9B,9C,9D,9F,9E" />
+    <Function Code="I3" Caption="IPP Void" Description="IPP Void" MsgData="9H,9G,H4" RspData="02,D0,03,04,01,9H,16,D1,D2,30,31,50,D3,D6,9A,9B,9C,9D,9F,9E" />
+    <Function Code="I4" Caption="Refund" Description="Refund" MsgData="40,9G,H4" RspData="02,D0,03,04,01,9H,16,D1,D2,30,31,50,D3,D6,9A,9B,9C,9D,9F,9E" />
+  </Group>
+
+  <Group Name="Concession">
+    <Function Code="21" Caption="Random Number" Description="Request Host Random Number" MsgData="" RspData="02,21,03,04" />
+    <Function Code="22" Caption="Init Update" Description="Initialize Update" MsgData="22,23,24,25" RspData="02,26,27,03,04" />
+    <Function Code="23" Caption="Terminal Data" Description="Request Concession Terminal Data" MsgData="28,29,32,33,16" RspData="" />
+  </Group>
+
+  <Group Name="EFTPOS">
+    <Function Code="13" Caption="Void from LOGS/STAN" Description="Void with RETR from Terminal LOGS/STAN" MsgData="65,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3" />
+    <Function Code="15" Caption="Void (manual)" Description="Void with Manual Input" MsgData="16,03,04,40,65,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4" />
+    <Function Code="17" Caption="Cash Deposit" Description="Cash Deposit" MsgData="40,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4,48,49" />
+    <Function Code="20" Caption="Purchase" Description="NETS Purchase" MsgData="40,42,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4" />
+    <Function Code="27" Caption="Refund" Description="NETS Refund" MsgData="40,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4" />
+    <Function Code="28" Caption="Purchase (ALL)" Description="NETS Purch/Cash/Purch+Cash/CUPs with Fee" MsgData="40,42,H4" RspData="02,D0,03,04,01,41,65,16,D1,D2,30,31,50,D3,D4,FA,F0" />
+    <Function Code="29" Caption="CUPS Purchase" Description="CUPS Purchase" MsgData="40,42,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4,FA,F0" />
+    <Function Code="35" Caption="Cash Back + Fee" Description="Cash Back + Fee" MsgData="42,H4" RspData="02,D0,03,04,01,41,65,16,D1,D2,30,31,50,D3,D4" />
+    <Function Code="36" Caption="Purchase + Cash Back + Fee" Description="Purchase + Cash Back + Fee" MsgData="40,42,H4" RspData="02,D0,03,04,01,41,65,16,D1,D2,30,31,50,D3,D4" />
+    <Function Code="37" Caption="CTLS EFTPOS Purchase" Description="Contactless EFTPOS Purchase" MsgData="40,H4" RspData="02,D0,03,04,01,41,65,16,D1,D2,30,31,50,D3,D4,FA,F0" />
+    <Function Code="38" Caption="Loyalty Purchase" Description="NETS Purchase with Loyalty Program" MsgData="40,42,43,H4" RspData="02,D0,03,04,01,40,41,65,16,D1,D3,FA,F0,F2,F1,L1,L8,L2,L6,L3,L4,D5,L5,L7" />
+    <Function Code="47" Caption="CTLS Loyalty Purchase" Description="Contactless EFTPOS Purchase with Loyalty Program" MsgData="40,42,43,H4" RspData="02,D0,03,04,01,40,41,65,16,D1,D3,FA,F0,F2,F1,L1,L8,L2,L6,L3,L4,D5,L5,L7" />
+    <Function Code="50" Caption="Purchase with Fee" Description="NETS Purchase with Service Fee" MsgData="40,42,H4" RspData="02,D0,03,04,01,41,65,16,D1,D2,30,31,50,D3,D4" />
+    <Function Code="70" Caption="Loyalty Inquiry" Description="Loyalty Inquiry" MsgData="H4" RspData="02,D0,03,04,01,65,16,D1,D3,L1,L8,L2,L6,L3,L4" />
+    <Function Code="91" Caption="CUPS Void from LOGS/STAN" Description="CUPS Void with RETR from Terminal Logs/STAN" MsgData="65,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,FA,F0" />
+    <Function Code="92" Caption="CUPS Void (manual)" Description="CUPS Void with Manual Input" MsgData="16,03,04,40,65,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4,FA,F0" />
+    <Function Code="93" Caption="CUPS Pre-Auth" Description="CUPS Pre-Auth" MsgData="40,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4,FA,F0" />
+    <Function Code="94" Caption="CUPS Pre-Auth Completion" Description="CUPS Pre-Auth Completion" MsgData="40,H4,17,03" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,D4,FA,F0" />
+    <Function Code="95" Caption="CUPS Pre-Auth Cancellation" Description="CUPS Pre-Auth Cancellation" MsgData="40,H4,16,03,04,65" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,FA,F0" />
+    <Function Code="96" Caption="CUPS Pre-Auth Completion Cancellation" Description="CUPS Pre-Auth Completion Cancellation" MsgData="65,H4" RspData="02,D0,03,04,01,65,16,D1,D2,30,31,50,D3,FA,F0" />
+    <Function Code="E0" Caption="CUPS Void from LOGS/STAN - ATM Chip" Description="Void with RETR from Terminal LOGS/STAN - ATM Chip" MsgData="65,H4" RspData="02,D0,03,04,16,D1,H6,01,D2,30,31,50,D3,E0" />
+    <Function Code="E1" Caption="Void (manual) - ATM Chip" Description="Void with Manual Input - ATM Chip" MsgData="16,03,04,40,65,H4" RspData="02,D0,03,04,16,D1,H6,01,D2,30,31,50,D3,D4,E0" />
+    <Function Code="E2" Caption="Cash Deposit - ATM Chip" Description="Cash Deposit - ATM Chip" MsgData="40,H4" RspData="02,D0,03,04,16,D1,H6,01,D2,30,31,50,D3,D4,48,49,E0" />
+    <Function Code="E3" Caption="Refund - ATM Chip" Description="NETS Refund - ATM Chip" MsgData="40,H4" RspData="02,D0,03,04,16,D1,H6,01,D2,30,31,50,D3,D4,E0" />
+    <Function Code="E4" Caption="Purchase - ATM Chip" Description="NETS Purchase/Cashback/Purchase with Cashback - ATM Chip" MsgData="40,42,H4" RspData="02,D0,03,04,16,D1,H6,01,41,D2,30,31,50,D3,D4,E0" />
+    <Function Code="E5" Caption="NETS+ Purchase - ATM Chip" Description="NETS Plus Purchase - ATM Chip" MsgData="40,42,43,H4" RspData="02,D0,03,04,16,D1,H6,01,40,41,D3,L1,L8,L2,L6,L3,L4,D5,L5,L7,E0" />
+    <Function Code="E6" Caption="NETS+ Inquiry - ATM Chip" Description="NETS Plus Inquiry - ATM Chip" MsgData="H4" RspData="02,D0,03,04,16,D1,H6,01,D3,L1,L8,L2,L6,L3,L4,E0" />
+  </Group>
+</FunctionList>

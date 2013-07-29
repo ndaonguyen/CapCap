@@ -1,0 +1,27 @@
+<table>
+    <tr>
+        <th align="center">Files</th>
+        <th align="center">Result</th>
+        <th><input type="submit" value="Generate" name="rewrite"  /></th>
+    </tr>
+
+    <tr>
+        <td valign="top">
+            <?php foreach ($this->xmlFiles as $file): 
+              $strStart = strrpos($file,'/');
+              $xmlFile  = substr($file,$strStart+1,strlen($file));
+            ?>
+            <p> <a href="?file=<?php echo$xmlFile; ?>"> <?php echo $xmlFile; ?> </a> </p>
+            <?php endforeach; ?>
+        </td>
+        
+        <td style="padding-left: 30px;">
+            <?php  echo $this->tableInfo; ?>
+        </td>
+    </tr>
+</table>
+
+<br />
+<br />
+<br />
+

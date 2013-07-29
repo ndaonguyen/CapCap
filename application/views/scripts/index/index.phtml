@@ -1,0 +1,67 @@
+<head>
+    <style type="text/css">
+    td {
+        color: black;
+        font-size: 12px;
+    }
+  
+    #buttonId{
+        background:none!important;
+        border:none;
+        color:blue;
+        text-decoration: none;
+        padding-left: 50px;
+    }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function() {
+                $('#btnGenerate').click(function (){    
+                    $.ajax({
+                            type: 'POST',
+                            dataType: 'json',
+                            url: './index/generate',
+                            cache: true,
+                            async: true,
+                            // you can use an object here
+                            data: { "func" : "runfunction", "action" : "favorites1" },
+                            success: function(json1){ 
+                             //   var json = $.parseJSON(data1);
+                                alert(json.Test);
+                                $("#result").html('Done ^^');
+                            },
+                            error:function(json1){  
+                         /*
+                                 if(json1==false)
+                                 {
+                                    alert("false");
+                                 }
+                                 else
+                                 {
+                                    alert();
+                                    alert("true");
+                                 }
+                          */
+                                 $("#result").html('Done ^^');
+                            }   
+                            });            
+                        return false;
+                    });
+            });
+    </script>
+</head>
+
+
+<table>
+    <tr>
+       <td bgcolor="#B7F7D9" style="width: 350px;" valign="top">
+            <?php echo $this->treeMenu ?>
+       </td>    
+       
+       <td valign="top" style="padding-left:10px">
+            <input type="button" id="btnGenerate" value="Generate File" name="writeFile"  />
+            <span id="result" style="color: red;"></span>
+            <?php echo $this->viewResult; ?>
+       </td>     
+    </tr>
+</table>

@@ -1,0 +1,11 @@
+git config --global user.email "you@example.com"
+git commit -m "first commit"
+git remote add origin https://github.com/ndaonguyen/CapCap.git
+git checkout master
+git push origin +HEAD
+
+COMMIT:
+git commit -m "first commit"
+git push -u origin master
+
+( remote if require)
